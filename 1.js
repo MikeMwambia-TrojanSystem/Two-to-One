@@ -4,6 +4,7 @@ function longest(s1, s2) {
     let uniqueElements = (value,index,arr)=>{
       return arr.indexOf(value) === index
     }
+
     let s1u = s1.split("")
   
     let s2u = s2.split("")
