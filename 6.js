@@ -13,3 +13,24 @@ function DNAStrand(dna){
         }
       }).join('')//join('') joins an array and removes the spaces
   }
+
+  //Alrenatives --- use replace
+  function DNAStrand(dna){
+      return dna.replace(/./g,function(c){
+          return DNAStrand.pairs[c]
+      })
+  }
+
+  DNAStrand.pairs = {
+      A:'T',
+      T:'A',
+      C:'G',
+      G:'C'
+  }
+
+
+  let pairs = {'A':'T','T':'A','C':'G','G':'C'};
+
+  function DNAStrand(dna){
+      return dna.split('').map((v)=>{return pairs[v]}).join('');
+  }
